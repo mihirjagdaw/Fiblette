@@ -14,7 +14,7 @@ namespace Fiblette
     {
         private int fibIndex = 0;
         private int[] fibSequence = new int[100];
-        private int bankroll = 100;
+        private int bankroll = 0;
 
 
         public Form1()
@@ -22,6 +22,10 @@ namespace Fiblette
             InitializeComponent();
             createFibSequence();
             resetFib();
+
+            lblBalance.Visible = false;
+            btnLose.Visible = false;
+            btnWin.Visible = false;
         }
 
         private void createFibSequence()
@@ -60,5 +64,17 @@ namespace Fiblette
             lblAmount.Text = $"Bet R {fibSequence[fibIndex].ToString()}";
         }
 
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            bankroll = int.Parse(txtStartingAmount.Text);
+
+            lblBalance.Visible = true;
+            btnLose.Visible = true;
+            btnWin.Visible = true;
+
+            lblStartingAmount.Visible = false;
+            txtStartingAmount.Visible = false;
+            btnEnter.Visible = false;
+        }
     }
 }

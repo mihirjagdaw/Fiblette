@@ -34,6 +34,7 @@
             this.lblStartingAmount = new System.Windows.Forms.Label();
             this.txtStartingAmount = new System.Windows.Forms.TextBox();
             this.lblBalance = new System.Windows.Forms.Label();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnWin
@@ -87,7 +88,7 @@
             this.txtStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStartingAmount.Location = new System.Drawing.Point(173, 13);
             this.txtStartingAmount.Name = "txtStartingAmount";
-            this.txtStartingAmount.Size = new System.Drawing.Size(248, 24);
+            this.txtStartingAmount.Size = new System.Drawing.Size(167, 24);
             this.txtStartingAmount.TabIndex = 4;
             // 
             // lblBalance
@@ -100,6 +101,16 @@
             this.lblBalance.TabIndex = 5;
             this.lblBalance.Text = "Balance :";
             // 
+            // btnEnter
+            // 
+            this.btnEnter.Location = new System.Drawing.Point(346, 13);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 6;
+            this.btnEnter.Text = "ENTER";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +119,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(433, 450);
+            this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.txtStartingAmount);
             this.Controls.Add(this.lblStartingAmount);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.Label lblStartingAmount;
         private System.Windows.Forms.TextBox txtStartingAmount;
         private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.Button btnEnter;
     }
 }
 
