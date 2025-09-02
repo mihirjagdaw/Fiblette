@@ -35,6 +35,9 @@
             this.txtStartingAmount = new System.Windows.Forms.TextBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
+            this.cbxEvenPayout = new System.Windows.Forms.CheckBox();
+            this.lblStartingBet = new System.Windows.Forms.Label();
+            this.txtStartingBet = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnWin
@@ -55,7 +58,7 @@
             this.btnLose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLose.Location = new System.Drawing.Point(271, 363);
+            this.btnLose.Location = new System.Drawing.Point(173, 363);
             this.btnLose.Name = "btnLose";
             this.btnLose.Size = new System.Drawing.Size(150, 75);
             this.btnLose.TabIndex = 1;
@@ -76,7 +79,7 @@
             // 
             this.lblStartingAmount.AutoSize = true;
             this.lblStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingAmount.Location = new System.Drawing.Point(12, 16);
+            this.lblStartingAmount.Location = new System.Drawing.Point(33, 22);
             this.lblStartingAmount.Name = "lblStartingAmount";
             this.lblStartingAmount.Size = new System.Drawing.Size(155, 18);
             this.lblStartingAmount.TabIndex = 3;
@@ -85,17 +88,17 @@
             // txtStartingAmount
             // 
             this.txtStartingAmount.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStartingAmount.Location = new System.Drawing.Point(173, 13);
+            this.txtStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStartingAmount.Location = new System.Drawing.Point(194, 19);
             this.txtStartingAmount.Name = "txtStartingAmount";
-            this.txtStartingAmount.Size = new System.Drawing.Size(167, 24);
+            this.txtStartingAmount.Size = new System.Drawing.Size(101, 22);
             this.txtStartingAmount.TabIndex = 4;
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(15, 54);
+            this.lblBalance.Location = new System.Drawing.Point(9, 160);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(78, 18);
             this.lblBalance.TabIndex = 5;
@@ -103,22 +106,56 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(346, 13);
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.Location = new System.Drawing.Point(228, 107);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.Size = new System.Drawing.Size(67, 25);
             this.btnEnter.TabIndex = 6;
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            // 
+            // cbxEvenPayout
+            // 
+            this.cbxEvenPayout.AutoSize = true;
+            this.cbxEvenPayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEvenPayout.Location = new System.Drawing.Point(36, 51);
+            this.cbxEvenPayout.Name = "cbxEvenPayout";
+            this.cbxEvenPayout.Size = new System.Drawing.Size(259, 22);
+            this.cbxEvenPayout.TabIndex = 7;
+            this.cbxEvenPayout.Text = "Are you playing even payouts? (1:1)";
+            this.cbxEvenPayout.UseVisualStyleBackColor = true;
+            // 
+            // lblStartingBet
+            // 
+            this.lblStartingBet.AutoSize = true;
+            this.lblStartingBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartingBet.Location = new System.Drawing.Point(36, 80);
+            this.lblStartingBet.Name = "lblStartingBet";
+            this.lblStartingBet.Size = new System.Drawing.Size(220, 18);
+            this.lblStartingBet.TabIndex = 8;
+            this.lblStartingBet.Text = "Enter your minimum/first bet : R ";
+            // 
+            // txtStartingBet
+            // 
+            this.txtStartingBet.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtStartingBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStartingBet.Location = new System.Drawing.Point(263, 77);
+            this.txtStartingBet.Name = "txtStartingBet";
+            this.txtStartingBet.Size = new System.Drawing.Size(32, 24);
+            this.txtStartingBet.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(433, 450);
+            this.ClientSize = new System.Drawing.Size(333, 450);
+            this.Controls.Add(this.txtStartingBet);
+            this.Controls.Add(this.lblStartingBet);
+            this.Controls.Add(this.cbxEvenPayout);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.txtStartingAmount);
@@ -143,6 +180,9 @@
         private System.Windows.Forms.TextBox txtStartingAmount;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.CheckBox cbxEvenPayout;
+        private System.Windows.Forms.Label lblStartingBet;
+        private System.Windows.Forms.TextBox txtStartingBet;
     }
 }
 
