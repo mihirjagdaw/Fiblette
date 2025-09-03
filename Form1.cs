@@ -141,5 +141,11 @@ namespace Fiblette
             btnEnter.Visible = false;
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            BalanceInfoForm balanceInfoForm = new BalanceInfoForm(this);
+            balanceInfoForm.Show();
+            this.Hide();
+        }
     }
 }

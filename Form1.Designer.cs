@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button btnInfo;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnWin = new System.Windows.Forms.Button();
             this.btnLose = new System.Windows.Forms.Button();
             this.lblAmount = new System.Windows.Forms.Label();
@@ -38,7 +40,19 @@
             this.cbxEvenPayout = new System.Windows.Forms.CheckBox();
             this.lblStartingBet = new System.Windows.Forms.Label();
             this.txtStartingBet = new System.Windows.Forms.TextBox();
+            btnInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnInfo
+            // 
+            btnInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInfo.BackgroundImage")));
+            btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnInfo.Location = new System.Drawing.Point(263, 154);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new System.Drawing.Size(32, 32);
+            btnInfo.TabIndex = 10;
+            btnInfo.UseVisualStyleBackColor = true;
+            btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnWin
             // 
@@ -153,6 +167,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(333, 450);
+            this.Controls.Add(btnInfo);
             this.Controls.Add(this.txtStartingBet);
             this.Controls.Add(this.lblStartingBet);
             this.Controls.Add(this.cbxEvenPayout);
