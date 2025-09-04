@@ -36,7 +36,7 @@ namespace Fiblette
             {
                 if (win)
                 {
-                    bankroll += fibSequence[fibIndex] * 2;
+                    bankroll += fibSequence[fibIndex];
                 }
                 else
                 {
