@@ -31,27 +31,29 @@ namespace Fiblette
 
         private void calcPayout(bool win)
         {
+            int bet = fibSequence[fibIndex];
+
             // if the user selects even payout, they get 1:1, else 2:1
             if (evenPayout)
             {
                 if (win)
                 {
-                    bankroll += fibSequence[fibIndex];
+                    bankroll += bet;
                 }
                 else
                 {
-                    bankroll -= fibSequence[fibIndex];
+                    bankroll -= bet;
                 }
             }
             else
             {
                 if (win)
                 {
-                    bankroll += fibSequence[fibIndex] * 3;
+                    bankroll += bet * 2;
                 }
                 else
                 {
-                    bankroll -= fibSequence[fibIndex];
+                    bankroll -= bet;
                 }
             }
         }
@@ -83,8 +85,22 @@ namespace Fiblette
                 lblBalance.ForeColor = Color.Black;
             }
 
-            lblBalance.Text = $"Balance: {bankroll}";
-            lblAmount.Text = $"Bet R {fibSequence[fibIndex].ToString()}";
+            
+            int currentStake = fibSequence[fibIndex];
+
+            
+            int nextIfWinIndex = (fibIndex >= 2) ? fibIndex - 2 : 0;
+            int nextIfLoseIndex = Math.Min(fibIndex + 1, fibSequence.Length - 1);
+
+            int nextIfWin = fibSequence[nextIfWinIndex];
+            int nextIfLose = fibSequence[nextIfLoseIndex];
+
+            
+            lblBalance.Text = $"Balance: R{bankroll}";
+            lblAmount.Text =
+                $"Current Bet: R{currentStake}\n" +
+                $"Next If Win: R{nextIfWin}\n" +
+                $"Next If Lose: R{nextIfLose}";
         }
         private void resetFib()
         {
@@ -95,18 +111,24 @@ namespace Fiblette
         private void btnWin_Click(object sender, EventArgs e)
         {
             calcPayout(true);
-            resetFib();
+
+            if (fibIndex > 2)
+            {
+                fibIndex -= 2;
+            }
+
+            displayAmounts();
         }
 
         private void btnLose_Click(object sender, EventArgs e)
         {
-            bankroll -= fibSequence[fibIndex];
+            calcPayout(false);
+
             fibIndex++;
             if (fibIndex >= fibSequence.Length)
             {
                 fibIndex = fibSequence.Length - 1;
             }
-            
             displayAmounts();
         }
 
