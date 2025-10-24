@@ -82,49 +82,53 @@
             // 
             // lblAmount
             // 
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
             this.lblAmount.Location = new System.Drawing.Point(12, 202);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(409, 158);
+            this.lblAmount.Size = new System.Drawing.Size(311, 158);
             this.lblAmount.TabIndex = 2;
             this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStartingAmount
             // 
             this.lblStartingAmount.AutoSize = true;
-            this.lblStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingAmount.Location = new System.Drawing.Point(33, 22);
+            this.lblStartingAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartingAmount.ForeColor = System.Drawing.Color.White;
+            this.lblStartingAmount.Location = new System.Drawing.Point(15, 21);
             this.lblStartingAmount.Name = "lblStartingAmount";
-            this.lblStartingAmount.Size = new System.Drawing.Size(155, 18);
+            this.lblStartingAmount.Size = new System.Drawing.Size(131, 21);
             this.lblStartingAmount.TabIndex = 3;
-            this.lblStartingAmount.Text = "Starting Amount: R ";
+            this.lblStartingAmount.Text = "Starting Amount: ";
             // 
             // txtStartingAmount
             // 
             this.txtStartingAmount.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.txtStartingAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStartingAmount.Location = new System.Drawing.Point(194, 19);
+            this.txtStartingAmount.Location = new System.Drawing.Point(201, 20);
             this.txtStartingAmount.Name = "txtStartingAmount";
-            this.txtStartingAmount.Size = new System.Drawing.Size(101, 22);
+            this.txtStartingAmount.Size = new System.Drawing.Size(94, 22);
             this.txtStartingAmount.TabIndex = 4;
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.Location = new System.Drawing.Point(9, 160);
+            this.lblBalance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalance.ForeColor = System.Drawing.Color.White;
+            this.lblBalance.Location = new System.Drawing.Point(11, 158);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(78, 18);
+            this.lblBalance.Size = new System.Drawing.Size(70, 21);
             this.lblBalance.TabIndex = 5;
             this.lblBalance.Text = "Balance :";
             // 
             // btnEnter
             // 
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(228, 107);
+            this.btnEnter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnter.ForeColor = System.Drawing.Color.White;
+            this.btnEnter.Location = new System.Drawing.Point(220, 108);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(67, 25);
+            this.btnEnter.Size = new System.Drawing.Size(75, 31);
             this.btnEnter.TabIndex = 6;
             this.btnEnter.Text = "ENTER";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -133,10 +137,11 @@
             // cbxEvenPayout
             // 
             this.cbxEvenPayout.AutoSize = true;
-            this.cbxEvenPayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxEvenPayout.Location = new System.Drawing.Point(36, 51);
+            this.cbxEvenPayout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEvenPayout.ForeColor = System.Drawing.Color.White;
+            this.cbxEvenPayout.Location = new System.Drawing.Point(19, 48);
             this.cbxEvenPayout.Name = "cbxEvenPayout";
-            this.cbxEvenPayout.Size = new System.Drawing.Size(259, 22);
+            this.cbxEvenPayout.Size = new System.Drawing.Size(276, 25);
             this.cbxEvenPayout.TabIndex = 7;
             this.cbxEvenPayout.Text = "Are you playing even payouts? (1:1)";
             this.cbxEvenPayout.UseVisualStyleBackColor = true;
@@ -144,20 +149,21 @@
             // lblStartingBet
             // 
             this.lblStartingBet.AutoSize = true;
-            this.lblStartingBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingBet.Location = new System.Drawing.Point(36, 80);
+            this.lblStartingBet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartingBet.ForeColor = System.Drawing.Color.White;
+            this.lblStartingBet.Location = new System.Drawing.Point(15, 79);
             this.lblStartingBet.Name = "lblStartingBet";
-            this.lblStartingBet.Size = new System.Drawing.Size(220, 18);
+            this.lblStartingBet.Size = new System.Drawing.Size(150, 21);
             this.lblStartingBet.TabIndex = 8;
-            this.lblStartingBet.Text = "Enter your minimum/first bet : R ";
+            this.lblStartingBet.Text = "Enter your first bet : ";
             // 
             // txtStartingBet
             // 
             this.txtStartingBet.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtStartingBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStartingBet.Location = new System.Drawing.Point(263, 77);
+            this.txtStartingBet.Location = new System.Drawing.Point(201, 78);
             this.txtStartingBet.Name = "txtStartingBet";
-            this.txtStartingBet.Size = new System.Drawing.Size(32, 24);
+            this.txtStartingBet.Size = new System.Drawing.Size(94, 24);
             this.txtStartingBet.TabIndex = 9;
             // 
             // Form1
@@ -165,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(333, 450);
             this.Controls.Add(btnInfo);
             this.Controls.Add(this.txtStartingBet);
