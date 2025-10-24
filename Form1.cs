@@ -18,6 +18,8 @@ namespace Fiblette
         private int startingBalance = 0;
         private int bankroll = 0;
         private bool evenPayout = false;
+        private int losses = 0;
+        private int wins = 0;
 
         public Form1()
         {
@@ -39,10 +41,12 @@ namespace Fiblette
                 if (win)
                 {
                     bankroll += bet;
+                    wins++;
                 }
                 else
                 {
                     bankroll -= bet;
+                    losses++;
                 }
             }
             else
@@ -50,10 +54,12 @@ namespace Fiblette
                 if (win)
                 {
                     bankroll += bet * 2;
+                    wins++;
                 }
                 else
                 {
                     bankroll -= bet;
+                    losses++;
                 }
             }
         }
@@ -134,6 +140,7 @@ namespace Fiblette
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            // add checks for valid input
             bankroll = int.Parse(txtStartingAmount.Text);
             startingBalance = bankroll;
 
@@ -165,9 +172,25 @@ namespace Fiblette
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            BalanceInfoForm balanceInfoForm = new BalanceInfoForm(this);
+            BalanceInfoForm balanceInfoForm = new BalanceInfoForm(this, maxLossStreak(), (bankroll-startingBalance), $"{wins} - {losses}") ;
             balanceInfoForm.Show();
             this.Hide();
+        }
+
+        private int maxLossStreak()
+        {
+            int fibSeqSum = 0;
+
+            for (int i = 0; i < fibSequence.Length; i++)
+            {
+                fibSeqSum = fibSequence[i] + fibSequence[i + 1];
+                if (fibSeqSum > bankroll)
+                {
+                    return i;
+                }
+            }
+
+            return 0;
         }
     }
 }
